@@ -25,7 +25,7 @@ namespace MinecraftClient.Protocol.Handlers
     ///  - If packet IDs were changed, also update getPacketIncomingType() and getPacketOutgoingID() inside Protocol18PacketTypes.cs
     ///  - Also see Material.cs and ItemType.cs for updating block and item data inside MCC
     /// </remarks>
-    class Protocol18Handler : IMinecraftCom
+    public class Protocol18Handler : IMinecraftCom
     {
         internal const int MC18Version = 47;
         internal const int MC19Version = 107;
@@ -53,7 +53,7 @@ namespace MinecraftClient.Protocol.Handlers
         IMinecraftComHandler handler;
         EntityPalette entityPalette;
         SocketWrapper socketWrapper;
-        DataTypes dataTypes;
+        public readonly DataTypes dataTypes;
         Thread netRead;
 
         public Protocol18Handler(TcpClient Client, int protocolVersion, IMinecraftComHandler handler, ForgeInfo forgeInfo)
@@ -788,7 +788,7 @@ namespace MinecraftClient.Protocol.Handlers
         /// </summary>
         /// <param name="packet">packet type</param>
         /// <param name="packetData">packet Data</param>
-        private void SendPacket(PacketOutgoingType packet, IEnumerable<byte> packetData)
+        public void SendPacket(PacketOutgoingType packet, IEnumerable<byte> packetData)
         {
             SendPacket(Protocol18PacketTypes.GetPacketOutgoingID(packet, protocolversion), packetData);
         }

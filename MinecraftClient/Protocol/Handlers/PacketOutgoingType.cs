@@ -12,7 +12,7 @@ namespace MinecraftClient.Protocol.Handlers
     /// Please add new entries at the bottom of the list
     /// You'll also need to add them to Protocol18PacketTypes for all MC versions since MC 1.7
     /// </remarks>
-    enum PacketOutgoingType
+    public enum PacketOutgoingType
     {
         KeepAlive,
         ResourcePackStatus,

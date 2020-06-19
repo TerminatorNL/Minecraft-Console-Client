@@ -1755,5 +1755,9 @@ namespace MinecraftClient
             }
             CurrentSlot = slot;
         }
+
+        public IMinecraftCom GetMinecraftCom() {
+            return handler;
+        }
     }
 }

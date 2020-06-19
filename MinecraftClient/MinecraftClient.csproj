@@ -102,6 +102,7 @@
     <Compile Include="Commands\Respawn.cs" />
     <Compile Include="Commands\Script.cs" />
     <Compile Include="Commands\Send.cs" />
+    <Compile Include="Commands\Resource.cs" />
     <Compile Include="Commands\Set.cs" />
     <Compile Include="Commands\Health.cs" />
     <Compile Include="Commands\Sneak.cs" />

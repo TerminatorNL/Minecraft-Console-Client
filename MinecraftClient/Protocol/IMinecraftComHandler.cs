@@ -250,5 +250,12 @@ namespace MinecraftClient.Protocol
         /// </summary>
         /// <param name="EntityID">Player entity ID</param>
         void SetPlayerEntityID(int EntityID);
+
+
+        /// <summary>
+        /// Gets the minecraft communications handler
+        /// </summary>
+        /// <returns>The minecraft communications handler</returns>
+        IMinecraftCom GetMinecraftCom();
     }
 }
